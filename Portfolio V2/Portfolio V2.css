@@ -1,0 +1,297 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0.1rem;
+    background-image: url();
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+.photo{
+    filter: drop-shadow(2px 2px 20px black);
+}
+
+nav{
+    position: fixed;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    justify-content: space-evenly;
+    gap: 1rem;
+    height: 2rem;
+    font-weight: bolder;
+    background-color: rgb(13, 165, 207);
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 2;
+}
+nav a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: white;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+nav a::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0.5rem;
+    height: 0.2rem;
+    width: 100%; /* Make sure the width is 100% initially */
+     background: black;
+     transform: scaleX(0);
+   transition: transform 0.3s ease-out;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+nav a:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+ }
+.home{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center; 
+ font-size: 300%;
+ font-weight: bolder;    
+ height: 100vh; 
+}
+.home h1{
+    color: rgba(30, 30, 227, 0.811);
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+
+.home h1 span{
+    color: black;
+}
+
+.home p{
+    margin-left: -20rem;
+    margin-top: 20rem;
+    color: black;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border:  0.2rem solid black;
+    border-radius: 5rem;
+    box-shadow: black;
+}
+.home p:hover{
+    background-color: burlywood;
+}
+.photo{
+    margin-left: 10rem;
+    height: 40rem;
+    width: 40rem;
+}
+.About{
+    font-size: 200%;
+    font-weight: bolder;
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+}
+.About p{
+    color: black;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border:  0.2rem solid black;
+    border-radius: 2rem;
+    padding: 5rem;
+}
+.Skills{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 300%;
+}
+.Skills img{
+    width: 20%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    border:  0.2rem solid black;
+    transition: all ease-in-out 0.5s;
+}
+
+.Skills img:hover{
+    width: 100%;
+}
+
+.Project img{
+    height: 20rem;
+    width: 20rem;
+}
+.Project{
+    font-size: 200%;
+    display: flex;
+    height: 100vh;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.Projects{
+    width: fit-content;
+    border-radius: 1rem;
+    border-color: black;
+    border-width: 20rem;
+    background-color: rgb(227, 224, 224);
+    padding: 1rem;
+    
+}
+.contact{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    gap: 9rem;   
+}
+.contacts{
+width: fit-content;
+border-radius: 1rem;
+align-items: center;
+padding: 0.5rem;
+justify-content: center;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0.1 solid #ccc;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+  }
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0.1 solid #ccc;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5rem;
+    background-color: #f2f2f2;
+    padding: 2rem;
+  }
+footer{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(13, 165, 207);
+    border-radius: 1rem;
+    padding: 0.1rem;
+}
+footer img{
+    height: 3rem;
+}
+footer img :hover{
+    filter: drop-shadow(10px 10px 20px red);
+}
+
+@media only screen and (max-width: 767px){
+*{
+    justify-content: center;
+}
+    .home{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200vh;
+}
+.home h1{
+    justify-content: center;
+}
+.home p{
+    margin-left: 7rem;
+    margin-top: -40rem;
+    padding: 2rem;
+}
+.home img{
+    margin-top:-50rem;
+    margin-left: 20rem;
+}
+.About{
+    display: flex;
+    flex-wrap: wrap;
+}
+.About p{
+    margin-left: 10rem;
+}
+.About img{
+    margin-left: 15rem;
+}
+    footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 150%;
+}
+.Skills{
+    display: grid;
+    grid-template-columns: auto;
+    width: 150%;
+    height: 600vh;
+}
+.Project{
+    margin-left: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+    height: 300vh;
+}
+footer{
+    display: flex;
+    width: 200%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(13, 165, 207);
+    border-radius: 1rem;
+    padding: 0.1rem
+}
+}
